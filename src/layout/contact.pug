@@ -1,0 +1,63 @@
+.review
+  .review_title
+    .title__small--review
+        | Что обо мне говорят
+    .buttons
+      .buttons_left
+        svg.percentage(viewbox='0 0 100 100', preserveaspectratio='none').percentage--buttons
+          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
+            .icon-arrow.icon-arrow--button-left
+      .buttons_right
+        svg.percentage(viewbox='0 0 100 100', preserveaspectratio='none').percentage--buttons
+          circle.skill__circle.skill__circle_under(cx='50', cy='50', r='40')
+            .icon-arrow.icon-arrow--button-right
+  ul.review_description
+    li.review_content
+      .review_content__quote
+        .icon-quote
+      .review_content__desc
+        .review_content__text
+          | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+        .review_content__info
+          .review_info__left
+            +image('content/avatar/avatar_2.png', 'user-pic')
+          .review_info__right
+            .review_fio
+              | Ковальчук Дмитрий
+            .review_position
+              | Основатель Loftschool
+    li.review_content
+      .review_content__quote
+        .icon-quote
+      .review_content__desc
+        .review_content__text
+          | Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+        .review_content__info
+          .review_info__left
+            +image('content/avatar/avatar_3.png', 'user-pic')
+          .review_info__right
+            .review_fio
+              | Владимир Сабанцев
+            .review_position
+              | Преподаватель
+.feedback
+  .title__small--review
+    | Связаться со мной
+  form.form__content
+  .form__content--left
+    label.form__label
+      span.form__subtitle
+        | Введите ваше имя
+      input.form__input(type='text', placeholder='Ковальчук Дмитрий', name='name', required).form__input--user
+    label.form__label
+      span.form__subtitle
+        | Введите ваш email
+      input.form__input(type='text', placeholder='loftschool@study.com', name='phone', required).form__input--envelope
+  .form__content--right
+    label.form__label.form__content--last_child
+      span.form__subtitle
+        | Сообщение к письму
+      textarea.form__textarea.form__input(placeholder='Требуется ваша помощь в создании сайта.Интересуют сроки и цена вопроса', name='comment', required).form__input--message
+    .form__button
+      button#sendButton.button.button--delivery(type='text')
+        | отправить
